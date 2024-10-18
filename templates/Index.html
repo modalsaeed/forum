@@ -3,220 +3,210 @@
     <head>
         <title>Forum</title>
         <link rel="stylesheet" href="/static/stylesheet.css">
+        <script src="script.js" defer></script>
     </head>
     <body>
-        <div class="above_body">
-
-            <div class="banner">
-                <header>
-                    <h1>BANNER</h1>
-                </header>
-            </div>
-
-            <div class="navbar">
-                <a href="login.html" class="button">Log In</a>
-                <a href="today.html" class="button">Today's Posts</a>
-                <a href="faq.html" class="button">FAQ</a>
-                <form action="/search" method="post">
-                    <input type="text" name="search" placeholder="Search" class="search_bar">
-                    <button type="submit" class="button">Search</button>
-                </form>
-            </div>
-
+        <div class="banner">
+            <img class="banner-image" src="/static/images/Reboot-Logo.png" a="index.html">
         </div>
+        <div class="navbar">
+                <button class="navbar-button" a="index.html">Home</button>
+                <button class="navbar-button" a="index.html">Latest</button>
+                <button class="navbar-button" a="index.html">FAQ</button>
+                <form class="navbar-search" action="/search" method="post">
+                    <input class="navbar-search" type="text" placeholder="Search">
+                    <button class="navbar-search" type="submit">Search</button>
+                </form>
+        </div>
+        <div class="forum-bits">
+            <form class="forum-bits" action="/post" method="get">
+                <select id="categories" name="categories" onchange="submitForm()">
+                    <option value="" disabled selected>Categories</option>
+                    <option value="Info">Value</option>
+                    <option value="op2">op2</option>
+                    <option value="op3">op3</option>
+                    <option value="op4">op4</option>
+                </select>
+            </form>
+            <button class="forum-bits-button" a="index.html">Categories</button>
+            <button class="forum-bits-button" a="index.html">Latest</button>
+            <button class="forum-bits-button" a="index.html">Top</button>
+        </div>
+        <div class="subforum">
 
-        <div class="body_boundary">
-            <div class="body_wrapper">
+                <table>
+                    <thead>
+                        <th>Category</th>
+                        <th>Topics</th>
+                        <th>Latest</th>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <div class="subforum-title">
+                            <td class="Category">
+                                <h3> 
+                                    <a href="/subforum">
+                                        <div class="category-title">
+                                            <span>Welcome</span>
+                                        </div>
+                                        <div class="category-image">
+                                            <img src="/static/images/Welcome.jpg">
+                                        </div>
+                                    </a>
+                                </h3>
+                                <div class="subcategories">
 
-                <div class="breadcrumbs">
-                    <ul>
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                    </ul>
-                </div>
+                                    <span class="subcategory">
+                                        <a class="badge-categpry" href="/subforum/1">
+                                            <span class="subcategory-title">
+                                                <span class="subcategory-name">
+                                                    Welcome
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </span>
 
-                <div class="above_threads"></div>
+                                    <span class="subcategory">
+                                        <a class="badge-categpry" href="/subforum/1">
+                                            <span class="subcategory-title">
+                                                <span class="subcategory-name">
+                                                    Announcements
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </span>
 
-                <div class="pagetitle">
-                    <h1>Forum</h1>
-                    <p>Welcome to Reboot01 Forums!</p>
-                </div>
+                                    <span class="subcategory">
+                                        <a class="badge-categpry" href="/subforum/1">
+                                            <span class="subcategory-title">
+                                                <span class="subcategory-name">
+                                                    Information
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </span>
 
-                <div class="forumbits">
+                                    <span class="subcategory">
+                                        <a class="badge-categpry" href="/subforum/1">
+                                            <span class="subcategory-title">
+                                                <span class="subcategory-name">
+                                                    Events
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </span>
 
-                    <div class="forumhead">
-                        <h2>
-                            <span class="forumtitle">Sub-forums</span>
-                            <span class="forumlastpost">Last Post</span>
-                        </h2>
-                    </div>
+                                </div>
+                            </td>
+                            <td class="topics">
+                                <span class="post-count">294</span>
+                                 / 
+                                <span class="post-unit">week</span>
+                            </td>
+                        </div>
+                        <div class="subforum-posts">
+                            <td class="latest-posts">
 
-                    <ol>
+                                <div class="last-post">
 
-                        <li class="forumbit_head L1">
+                                    <div class="poster">
+                                        <a href="/user/1">
+                                            <img src="/static/images/user1.PNG">
+                                        </a>
+                                    </div>
 
-                            <div class="forumhead foruminfo L1">
-                                <h2>
-                                    <span class="forumtitle">Information</span>
-                                </h2>
-                            </div>
+                                    <div class="main-post">
+                                        <div class="post-title">
+                                            <a href="/post/1">Welcome to Reboot</a>
+                                        </div>
+                                        <div class="post-subcategory">
+                                            <a class="badge-category" href="/subforum/1">
+                                                <span class="subcategory-title">
+                                                    <span class="subcategory-name">
+                                                        Welcome
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
 
-                            <ol class="childforum">
+                                    <div class="post-stats">
+                                        <div class="replies-num">Replies: 39</div>
+                                        <div class="post-date">Post Date: 17th Oct 2024</div>
+                                        <div class="last-activity">Last Activity: 8 min</div>
+                                    </div>
 
-                                <div class="forumrowdata">
-                                    <p class="subforum_description">
-                                        <a href="Welcome.html">Welcome</a>
-                                         / 
-                                        <a href="Rules.html">Rules</a>
-                                        / 
-                                        <a href="FAQ.html">FAQ</a>
-                                        / 
-                                        <a href="anouncements.html">Announcements</a>
-                                        / 
-                                        <a href="events.html">Events</a>
-                                        / 
-                                        <a href="information.html">General Information</a>
-                                    </p>
                                 </div>
 
-                                <li class="forumbit_post L2">
-                                    <div class="forumrow table">
+                                <div class="last-post">
 
-                                        <div class="foruminfo tabledata">
-                                            <a href="Welcome.html">Welcome</a>
-                                        </div>
+                                    <div class="poster">
+                                        <a href="/user/1">
+                                            <img src="/static/images/user1.PNG">
+                                        </a>
+                                    </div>
 
-                                        <div class="forumstat tabledata">
-                                            <ul>
-                                                <li> Threads: 104</li>
-                                                <li> Posts: 253</li>
-                                            </ul>
+                                    <div class="main-post">
+                                        <div class="post-title">
+                                            <a href="/post/1">Next JS Piscene!</a>
                                         </div>
-                                        <div class="forumlastpost tabledata">
-                                            <p class="lastpost_title">Welcome to Reboot01!</p>
-                                            <p class="lastpost_by"> by Mohamed Saeed</p>
-                                            <p class="lastpost_date">20-09-2024 4:27 AM</p>
+                                        <div class="post-subcategory">
+                                            <a class="badge-category" href="/subforum/1">
+                                                <span class="subcategory-title">
+                                                    <span class="subcategory-name">
+                                                        Announcements
+                                                    </span>
+                                                </span>
+                                            </a>
                                         </div>
                                     </div>
-                                </li>
 
-                                <li class="forumbit_post L2">
-                                    <div class="forumrow table">
+                                    <div class="post-stats">
+                                        <div class="replies-num">Replies: 150</div>
+                                        <div class="post-date">Post Date: 17th Oct 2024</div>
+                                        <div class="last-activity">Last Activity: 10 min</div>
+                                    </div>
 
-                                        <div class="foruminfo tabledata">
-                                            <a href="Welcome.html">Rules</a>
+                                </div>
+
+                                <div class="last-post">
+
+                                    <div class="poster">
+                                        <a href="/user/1">
+                                            <img src="/static/images/user1.PNG">
+                                        </a>
+                                    </div>
+
+                                    <div class="main-post">
+                                        <div class="post-title">
+                                            <a href="/post/1">Valorant Tournament</a>
                                         </div>
-
-                                        <div class="forumstat tabledata">
-                                            <ul>
-                                                <li> Threads: 10</li>
-                                                <li> Posts: 10</li>
-                                            </ul>
-                                        </div>
-                                        <div class="forumlastpost tabledata">
-                                            <p class="lastpost_title">Reboot01 Rules</p>
-                                            <p class="lastpost_by"> by Mohamed Saeed</p>
-                                            <p class="lastpost_date">20-09-2024 4:27 AM</p>
+                                        <div class="post-subcategory">
+                                            <a class="badge-category" href="/subforum/1">
+                                                <span class="subcategory-title">
+                                                    <span class="subcategory-name">
+                                                        Events
+                                                    </span>
+                                                </span>
+                                            </a>
                                         </div>
                                     </div>
-                                </li>
 
-                                <li class="forumbit_post L2">
-                                    <div class="forumrow table">
-
-                                        <div class="foruminfo tabledata">
-                                            <a href="Welcome.html">FAQ</a>
-                                        </div>
-
-                                        <div class="forumstat tabledata">
-                                            <ul>
-                                                <li> Threads: 20</li>
-                                                <li> Posts: 50</li>
-                                            </ul>
-                                        </div>
-                                        <div class="forumlastpost tabledata">
-                                            <p class="lastpost_title">How to join Reboot01</p>
-                                            <p class="lastpost_by"> by Mohamed Saeed</p>
-                                            <p class="lastpost_date">20-09-2024 4:27 AM</p>
-                                        </div>
+                                    <div class="post-stats">
+                                        <div class="replies-num">Replies: 15</div>
+                                        <div class="post-date">Post Date: 16th Oct 2024</div>
+                                        <div class="last-activity">Last Activity: 2 hours</div>
                                     </div>
-                                </li>
 
-                                <li class="forumbit_post L2">
-                                    <div class="forumrow table">
+                                </div>
 
-                                        <div class="foruminfo tabledata">
-                                            <a href="Welcome.html">Announcements</a>
-                                        </div>
-
-                                        <div class="forumstat tabledata">
-                                            <ul>
-                                                <li> Threads: 260</li>
-                                                <li> Posts: 600</li>
-                                            </ul>
-                                        </div>
-                                        <div class="forumlastpost tabledata">
-                                            <p class="lastpost_title">Reboot01 Talent Hub</p>
-                                            <p class="lastpost_by"> by Mohamed Saeed</p>
-                                            <p class="lastpost_date">20-09-2024 4:27 AM</p>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="forumbit_post L2">
-                                    <div class="forumrow table">
-
-                                        <div class="foruminfo tabledata">
-                                            <a href="Welcome.html">Events</a>
-                                        </div>
-
-                                        <div class="forumstat tabledata">
-                                            <ul>
-                                                <li> Threads: 104</li>
-                                                <li> Posts: 253</li>
-                                            </ul>
-                                        </div>
-                                        <div class="forumlastpost tabledata">
-                                            <p class="lastpost_title">Chess Tournament</p>
-                                            <p class="lastpost_by"> by Mohamed Saeed</p>
-                                            <p class="lastpost_date">20-09-2024 4:27 AM</p>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="forumbit_post L2">
-                                    <div class="forumrow table">
-
-                                        <div class="foruminfo tabledata">
-                                            <a href="Welcome.html">General Information</a>
-                                        </div>
-
-                                        <div class="forumstat tabledata">
-                                            <ul>
-                                                <li> Threads: 104</li>
-                                                <li> Posts: 253</li>
-                                            </ul>
-                                        </div>
-                                        <div class="forumlastpost tabledata">
-                                            <p class="lastpost_title">Reboot01 Student Plan</p>
-                                            <p class="lastpost_by"> by Mohamed Saeed</p>
-                                            <p class="lastpost_date">20-09-2024 4:27 AM</p>
-                                        </div>
-                                    </div>
-                                </li>
-
-                            </ol>
-                        </li>
-
-                    </ol>
-
-                </div>
-
+                            </td>
+                        </div>
+                    </tr>
+                </tbody>
+                </table>
             </div>
-        </div>
 
-        <div class="below_body">
         </div>
     </body>
 </html>
