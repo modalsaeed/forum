@@ -3,9 +3,11 @@
     <head>
         <title>Forum</title>
         <link rel="stylesheet" href="/static/stylesheet.css">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
         <script src="script.js" defer></script>
     </head>
     <body>
+        <div class="header sticky-header">
         <div class="banner">
             <img class="banner-image" src="/static/images/Reboot-Logo.png" a="index.html">
         </div>
@@ -14,13 +16,17 @@
                 <button class="navbar-button" a="index.html">Latest</button>
                 <button class="navbar-button" a="index.html">FAQ</button>
                 <form class="navbar-search" action="/search" method="post">
-                    <input class="navbar-search" type="text" placeholder="Search">
-                    <button class="navbar-search" type="submit">Search</button>
+                    <input class="navbar-search-input" type="text" placeholder="Search">
+                    <button class="navbar-search-button" type="submit">
+                        <span class="material-symbols-outlined">search</span>
+                    </button>
                 </form>
         </div>
+        </div>
+        <div class="container">
         <div class="forum-bits">
             <form class="forum-bits" action="/post" method="get">
-                <select id="categories" name="categories" onchange="submitForm()">
+                <select class="drop-down"id="categories" name="categories" onchange="submitForm()">
                     <option value="" disabled selected>Categories</option>
                     <option value="Info">Value</option>
                     <option value="op2">op2</option>
@@ -28,10 +34,11 @@
                     <option value="op4">op4</option>
                 </select>
             </form>
-            <button class="forum-bits-button" a="index.html">Categories</button>
+            <button class="forum-bits-button active" a="index.html">Categories</button>
             <button class="forum-bits-button" a="index.html">Latest</button>
             <button class="forum-bits-button" a="index.html">Top</button>
         </div>
+
         <div class="subforum">
 
                 <table>
@@ -41,9 +48,12 @@
                         <th>Latest</th>
                     </thead>
                     <tbody>
+
                     <tr>
                         <div class="subforum-title">
-                            <td class="Category">
+                            <td class="category">
+                                <div class="category-content">
+                                <div class="category-left">
                                 <h3> 
                                     <a href="/subforum">
                                         <div class="category-title">
@@ -54,10 +64,11 @@
                                         </div>
                                     </a>
                                 </h3>
+                                </div>
                                 <div class="subcategories">
 
                                     <span class="subcategory">
-                                        <a class="badge-categpry" href="/subforum/1">
+                                        <a class="badge-category" href="/subforum/1">
                                             <span class="subcategory-title">
                                                 <span class="subcategory-name">
                                                     Welcome
@@ -67,7 +78,7 @@
                                     </span>
 
                                     <span class="subcategory">
-                                        <a class="badge-categpry" href="/subforum/1">
+                                        <a class="badge-category" href="/subforum/1">
                                             <span class="subcategory-title">
                                                 <span class="subcategory-name">
                                                     Announcements
@@ -77,7 +88,7 @@
                                     </span>
 
                                     <span class="subcategory">
-                                        <a class="badge-categpry" href="/subforum/1">
+                                        <a class="badge-category" href="/subforum/1">
                                             <span class="subcategory-title">
                                                 <span class="subcategory-name">
                                                     Information
@@ -87,7 +98,7 @@
                                     </span>
 
                                     <span class="subcategory">
-                                        <a class="badge-categpry" href="/subforum/1">
+                                        <a class="badge-category" href="/subforum/1">
                                             <span class="subcategory-title">
                                                 <span class="subcategory-name">
                                                     Events
@@ -97,6 +108,8 @@
                                     </span>
 
                                 </div>
+                            </div>
+                        </div>
                             </td>
                             <td class="topics">
                                 <span class="post-count">294</span>
@@ -121,8 +134,8 @@
                                         </div>
                                         <div class="post-subcategory">
                                             <a class="badge-category" href="/subforum/1">
-                                                <span class="subcategory-title">
-                                                    <span class="subcategory-name">
+                                                <span class="post-subcategory-title">
+                                                    <span class="post-subcategory-name">
                                                         Welcome
                                                     </span>
                                                 </span>
@@ -152,8 +165,8 @@
                                         </div>
                                         <div class="post-subcategory">
                                             <a class="badge-category" href="/subforum/1">
-                                                <span class="subcategory-title">
-                                                    <span class="subcategory-name">
+                                                <span class="post-subcategory-title">
+                                                    <span class="post-subcategory-name">
                                                         Announcements
                                                     </span>
                                                 </span>
@@ -183,8 +196,8 @@
                                         </div>
                                         <div class="post-subcategory">
                                             <a class="badge-category" href="/subforum/1">
-                                                <span class="subcategory-title">
-                                                    <span class="subcategory-name">
+                                                <span class="post-subcategory-title">
+                                                    <span class="post-subcategory-name">
                                                         Events
                                                     </span>
                                                 </span>
@@ -203,10 +216,348 @@
                             </td>
                         </div>
                     </tr>
+
+                    <tr>
+                        <div class="subforum-title">
+                            <td class="category">
+                                <div class="category-content">
+                                <div class="category-left">
+                                <h3> 
+                                    <a href="/subforum">
+                                        <div class="category-title">
+                                            <span>Golang</span>
+                                        </div>
+                                        <div class="category-image">
+                                            <img src="/static/images/golang.png">
+                                        </div>
+                                    </a>
+                                </h3>
+                                </div>
+                                <div class="subcategories">
+
+                                    <span class="subcategory">
+                                        <a class="badge-category" href="/subforum/1">
+                                            <span class="subcategory-title">
+                                                <span class="subcategory-name">
+                                                    Piscene
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </span>
+
+                                    <span class="subcategory">
+                                        <a class="badge-category" href="/subforum/1">
+                                            <span class="subcategory-title">
+                                                <span class="subcategory-name">
+                                                    Projects
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </span>
+
+                                    <span class="subcategory">
+                                        <a class="badge-category" href="/subforum/1">
+                                            <span class="subcategory-title">
+                                                <span class="subcategory-name">
+                                                    Discussion
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </span>
+
+                                    <span class="subcategory">
+                                        <a class="badge-category" href="/subforum/1">
+                                            <span class="subcategory-title">
+                                                <span class="subcategory-name">
+                                                    Challenges
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </span>
+
+                                </div>
+                            </div>
+                        </div>
+                            </td>
+                            <td class="topics">
+                                <span class="post-count">654</span>
+                                 / 
+                                <span class="post-unit">week</span>
+                            </td>
+                        </div>
+                        <div class="subforum-posts">
+                            <td class="latest-posts">
+
+                                <div class="last-post">
+
+                                    <div class="poster">
+                                        <a href="/user/1">
+                                            <img src="/static/images/user1.PNG">
+                                        </a>
+                                    </div>
+
+                                    <div class="main-post">
+                                        <div class="post-title">
+                                            <a href="/post/1">Lem-in Optimization</a>
+                                        </div>
+                                        <div class="post-subcategory">
+                                            <a class="badge-category" href="/subforum/1">
+                                                <span class="post-subcategory-title">
+                                                    <span class="post-subcategory-name">
+                                                        Projects
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="post-stats">
+                                        <div class="replies-num">Replies: 39</div>
+                                        <div class="post-date">Post Date: 17th Oct 2024</div>
+                                        <div class="last-activity">Last Activity: 8 min</div>
+                                    </div>
+
+                                </div>
+
+                                <div class="last-post">
+
+                                    <div class="poster">
+                                        <a href="/user/1">
+                                            <img src="/static/images/user1.PNG">
+                                        </a>
+                                    </div>
+
+                                    <div class="main-post">
+                                        <div class="post-title">
+                                            <a href="/post/1">How to pass the Piscene</a>
+                                        </div>
+                                        <div class="post-subcategory">
+                                            <a class="badge-category" href="/subforum/1">
+                                                <span class="post-subcategory-title">
+                                                    <span class="post-subcategory-name">
+                                                        Piscene
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="post-stats">
+                                        <div class="replies-num">Replies: 150</div>
+                                        <div class="post-date">Post Date: 17th Oct 2024</div>
+                                        <div class="last-activity">Last Activity: 10 min</div>
+                                    </div>
+
+                                </div>
+
+                                <div class="last-post">
+
+                                    <div class="poster">
+                                        <a href="/user/1">
+                                            <img src="/static/images/user1.PNG">
+                                        </a>
+                                    </div>
+
+                                    <div class="main-post">
+                                        <div class="post-title">
+                                            <a href="/post/1">Go routines: How to use them</a>
+                                        </div>
+                                        <div class="post-subcategory">
+                                            <a class="badge-category" href="/subforum/1">
+                                                <span class="post-subcategory-title">
+                                                    <span class="post-subcategory-name">
+                                                        Discussion
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="post-stats">
+                                        <div class="replies-num">Replies: 15</div>
+                                        <div class="post-date">Post Date: 16th Oct 2024</div>
+                                        <div class="last-activity">Last Activity: 2 hours</div>
+                                    </div>
+
+                                </div>
+
+                            </td>
+                        </div>
+                    </tr>
+
+                    <tr>
+                        <div class="subforum-title">
+                            <td class="category">
+                                <div class="category-content">
+                                <div class="category-left">
+                                <h3> 
+                                    <a href="/subforum">
+                                        <div class="category-title">
+                                            <span>Golang</span>
+                                        </div>
+                                        <div class="category-image">
+                                            <img src="/static/images/golang.png">
+                                        </div>
+                                    </a>
+                                </h3>
+                                </div>
+                                <div class="subcategories">
+
+                                    <span class="subcategory">
+                                        <a class="badge-category" href="/subforum/1">
+                                            <span class="subcategory-title">
+                                                <span class="subcategory-name">
+                                                    Piscene
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </span>
+
+                                    <span class="subcategory">
+                                        <a class="badge-category" href="/subforum/1">
+                                            <span class="subcategory-title">
+                                                <span class="subcategory-name">
+                                                    Projects
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </span>
+
+                                    <span class="subcategory">
+                                        <a class="badge-category" href="/subforum/1">
+                                            <span class="subcategory-title">
+                                                <span class="subcategory-name">
+                                                    Discussion
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </span>
+
+                                    <span class="subcategory">
+                                        <a class="badge-category" href="/subforum/1">
+                                            <span class="subcategory-title">
+                                                <span class="subcategory-name">
+                                                    Challenges
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </span>
+
+                                </div>
+                            </div>
+                        </div>
+                            </td>
+                            <td class="topics">
+                                <span class="post-count">654</span>
+                                 / 
+                                <span class="post-unit">week</span>
+                            </td>
+                        </div>
+                        <div class="subforum-posts">
+                            <td class="latest-posts">
+
+                                <div class="last-post">
+
+                                    <div class="poster">
+                                        <a href="/user/1">
+                                            <img src="/static/images/user1.PNG">
+                                        </a>
+                                    </div>
+
+                                    <div class="main-post">
+                                        <div class="post-title">
+                                            <a href="/post/1">Lem-in Optimization</a>
+                                        </div>
+                                        <div class="post-subcategory">
+                                            <a class="badge-category" href="/subforum/1">
+                                                <span class="post-subcategory-title">
+                                                    <span class="post-subcategory-name">
+                                                        Projects
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="post-stats">
+                                        <div class="replies-num">Replies: 39</div>
+                                        <div class="post-date">Post Date: 17th Oct 2024</div>
+                                        <div class="last-activity">Last Activity: 8 min</div>
+                                    </div>
+
+                                </div>
+
+                                <div class="last-post">
+
+                                    <div class="poster">
+                                        <a href="/user/1">
+                                            <img src="/static/images/user1.PNG">
+                                        </a>
+                                    </div>
+
+                                    <div class="main-post">
+                                        <div class="post-title">
+                                            <a href="/post/1">How to pass the Piscene</a>
+                                        </div>
+                                        <div class="post-subcategory">
+                                            <a class="badge-category" href="/subforum/1">
+                                                <span class="post-subcategory-title">
+                                                    <span class="post-subcategory-name">
+                                                        Piscene
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="post-stats">
+                                        <div class="replies-num">Replies: 150</div>
+                                        <div class="post-date">Post Date: 17th Oct 2024</div>
+                                        <div class="last-activity">Last Activity: 10 min</div>
+                                    </div>
+
+                                </div>
+
+                                <div class="last-post">
+
+                                    <div class="poster">
+                                        <a href="/user/1">
+                                            <img src="/static/images/user1.PNG">
+                                        </a>
+                                    </div>
+
+                                    <div class="main-post">
+                                        <div class="post-title">
+                                            <a href="/post/1">Go routines: How to use them</a>
+                                        </div>
+                                        <div class="post-subcategory">
+                                            <a class="badge-category" href="/subforum/1">
+                                                <span class="post-subcategory-title">
+                                                    <span class="post-subcategory-name">
+                                                        Discussion
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="post-stats">
+                                        <div class="replies-num">Replies: 15</div>
+                                        <div class="post-date">Post Date: 16th Oct 2024</div>
+                                        <div class="last-activity">Last Activity: 2 hours</div>
+                                    </div>
+
+                                </div>
+
+                            </td>
+                        </div>
+                    </tr>
+                    
                 </tbody>
                 </table>
             </div>
 
         </div>
+    </div>
     </body>
 </html>
